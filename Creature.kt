@@ -8,7 +8,6 @@ interface Fightable {
         get() = (0 until diceCount).map {
             Random().nextInt(diceSides) + 1
         }.sum()
-    //跑迴圈0..diceCount-1次 產生清單內容 隨機數值為0~5+1 最後加總
 
     fun attack(opponent: Fightable): Int
 }

@@ -81,7 +81,7 @@ object Game {
             Thread.sleep(1000) //延遲
         }
         "戰鬥結束"
-    } ?: "這裡已經沒有怪物"
+    } ?: "這裡沒有怪物"
 
     private fun slay(monster: Monster) {
         println("${monster.name} 對 ${player.name} 造成 ${monster.attack(player)} 傷害")
