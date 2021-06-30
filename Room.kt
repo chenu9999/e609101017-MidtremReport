@@ -4,7 +4,7 @@ open class Room(val name: String) {
     open var monster: Monster? = monsterList.shuffled().first()
 
     fun description() = "位置: $name" + "   危險級別: $dangerLevel\n" +
-    "怪物出現: ${monster?.description ?: "沒有"}"
+    "出現怪物: ${monster?.description ?: "沒有"}"
 
     open fun load() = "這裡沒什麼好看的"
 }

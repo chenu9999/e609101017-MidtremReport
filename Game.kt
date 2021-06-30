@@ -9,8 +9,9 @@ object Game {
     private var currentRoom: Room = TownSquare()
 
     private var worldMap = listOf(
-        listOf(currentRoom, Room("酒館"), Room("後面房間")),
-        listOf(Room("長廊"), Room("普通房間")))
+        listOf(currentRoom, Room("平原"), Room("山丘")),
+        listOf(Room("山谷"), Room("濕地"), Room("洞穴")),
+        listOf(Room("森林"), Room("補血"), Room("高原")))
 
 
     init {
