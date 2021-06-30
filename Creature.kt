@@ -23,9 +23,25 @@ abstract class Monster(val name: String,
 }
 
 class Goblin(name: String = "小妖精",
-             description: String = "一隻討厭的地精",
+             description: String = "小妖精從暗處露出冷笑",
              healthPoints: Int = 30) : Monster(name, description, healthPoints)
 {
     override val diceCount = 2
     override val diceSides = 8
+}
+
+class Bone(name: String = "骷髏",
+             description: String = "骷髏從下方破土而出",
+             healthPoints: Int = 45) : Monster(name, description, healthPoints)
+{
+    override val diceCount = 3
+    override val diceSides = 9
+}
+
+class Troll(name: String = "巨魔",
+           description: String = "巨魔從上方俯視你",
+           healthPoints: Int = 60) : Monster(name, description, healthPoints)
+{
+    override val diceCount = 1
+    override val diceSides = 60
 }
