@@ -16,7 +16,7 @@ object Game {
 
     init {
         println("歡迎，冒險者")
-        player.castFireball(5)
+        drink(glass=player.castFireball(51))
     }
 
     fun play() {
@@ -113,6 +113,35 @@ object Game {
             }
             println()
         }
+    }
+
+    private fun drink(glass: Int) {
+    if (glass == 0) {
+        println("酒醉狀態: 清醒")
+        println("準備萬全，開始冒險")}
+    else if (glass in 1..10){
+        println("酒醉狀態: 微醺")
+        println("心情絕佳，開始冒險")}
+    else if (glass in 11..20){
+        println("酒醉狀態: 微醉")
+        println("狀況稍差，血量減少5")
+        player.healthPoints -= 5}
+    else if (glass in 21..30){
+        println("酒醉狀態: 醉了")
+        println("全身疲倦，血量減少15")
+        player.healthPoints -= 15}
+    else if (glass in 31..40){
+        println("酒醉狀態: 大醉")
+        println("移動困難，血量減少40")
+        player.healthPoints -= 40}
+    else if (glass in 41..50){
+        println("酒醉狀態: 爛醉如泥")
+        println("開始胡言亂語，血量減少50")
+        player.healthPoints -= 50}
+    else {
+        println("酒醉狀態: 沒意識")
+        println("完全沒反應，血量減少90")
+        player.healthPoints -= 90}
     }
 
     fun ringBell(bellSound: String) = "$bellSound 鐘樓響起鐘聲宣布你的到來"

@@ -57,8 +57,10 @@ class Player(_name: String,
             else -> "狀態不妙"
         }
 
-    fun castFireball(numFireballs: Int = 2) =
-        println("$numFireballs" + "杯Fireball突然出現")
+    fun castFireball(numFireBalls: Int = 2): Int {
+        println("已喝下$numFireBalls" + "杯Fireball")
+        return numFireBalls
+    }
 
     override val diceCount = 3
 
