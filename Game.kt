@@ -103,14 +103,13 @@ object Game {
         val x: Int = player.currentPosition.x
         val y: Int = player.currentPosition.y
         println("目前位置座標:$x,$y")
-        for (i in 0..1) {
+        for (i in 0..2) {
             for (j in 0..2) {
                 if (j == x && i == y) {
-                    print("X ")
+                    print("X  ")
                 } else {
-                    print("O ")
+                    print("O  ")
                 }
-                if (i == 1 && j == 1) break
             }
             println()
         }
