@@ -45,3 +45,11 @@ class Troll(name: String = "巨魔",
     override val diceCount = 1
     override val diceSides = 60
 }
+
+class Rogue(name: String = "地痞流氓",
+            description: String = "地痞流氓從暗巷中露出貪婪的目光",
+            healthPoints: Int = 60) : Monster(name, description, healthPoints)
+{
+    override val diceCount = 1
+    override val diceSides = 3
+}
