@@ -13,6 +13,7 @@ class Player(_name: String,
     val hometown by lazy { selectHometown() }
     var currentPosition = Coordinate(0, 0)
 
+
     init {
         require(healthPoints > 0, {"血量必須大於0"})
         require(name.isNotBlank(), {"必須設定玩家名字"})

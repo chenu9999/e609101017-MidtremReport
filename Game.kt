@@ -11,7 +11,7 @@ object Game {
     private var worldMap = listOf(
         listOf(currentRoom, Room("平原"), Room("山丘")),
         listOf(Room("山谷"), Room("濕地"), Room("洞穴")),
-        listOf(Room("森林"), Room("補血"), Room("高原")))
+        listOf(Room("森林"), Goddess(), Room("高原")))
 
 
     init {
